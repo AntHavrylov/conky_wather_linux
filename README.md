@@ -39,8 +39,9 @@ conky -c /home/<USERNAME>/.config/conky/weather.conf
 create file `conky-weather.desktop` in /home/<USERNAME>/.config/autostart
 
 Example:
+!!! change <USERNAME> to your user name in OS
 
-[Desktop Entry]
+```[Desktop Entry]
 Type=Application
 Exec=conky -c /home/<USERNAME>/.config/conky/weather.conf
 Hidden=false
@@ -48,5 +49,4 @@ NoDisplay=false
 X-GNOME-Autostart-enabled=true
 Name=Conky_Weather
 Comment=Start Conky at login
-
-!!! change <USERNAME> to your user name in OS
+```
