@@ -39,7 +39,7 @@ conky -c /home/<USERNAME>/.config/conky/weather.conf
 create file `conky-weather.desktop` in /home/<USERNAME>/.config/autostart
 
 Example:
-!!! change <USERNAME> to your user name in OS
+!!! change `<USERNAME>` to your `user name in OS`
 
 ```
 [Desktop Entry]
