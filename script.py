@@ -3,10 +3,17 @@ import json
 import os
 from datetime import datetime, timedelta
 
-api_key = 'a0d0d64e284da5f64f26662287fa6091'
-city = 'Hamburg'
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+config_file = os.path.join(script_dir, 'config.json')
+cache_file = os.path.join(script_dir, 'data.json')
+
+with open(config_file, 'r') as f:
+    config = json.load(f)
+    api_key = config['api_key']
+    city = config['city']
+
 url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
-cache_file = '/home/antroot/.config/conky/data.json'
 
 def get_weather_data():
     response = requests.get(url)
